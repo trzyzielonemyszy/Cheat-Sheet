@@ -1,0 +1,3 @@
+docker compose 
+
+docker image rm $(docker image ls -q)           usuwanie wszystkich imagów
