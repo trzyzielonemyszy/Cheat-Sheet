@@ -1,4 +1,11 @@
 docker compose 
-
+docker volume rm $(docker volume ls -q) 
 docker image rm $(docker image ls -q)           usuwanie wszystkich imagów
-ddsdasdasd
+docker system prune               This will remove:- all stopped containers,all networks not used by at least one container all dangling images
+  - all dangling build cache
+
+docker container inspect --format '{{ .NetworkSettings.IPAddress }}' <container name>        wyswietla ip contanera
+docker container inspect --format '{{ .NetworkSettings.Ports }}' <container name>
+docker ps --format '{{.Image}}'           listuje właczone kontenery wypisujac tylko image 
+docker ps --format '{{.Names}}'           listuje włączone konrtenery, tylko nazwy
+docker-compose -f docker-compose.yml -f ssl.yml up -d
