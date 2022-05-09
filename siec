@@ -1,1 +1,5 @@
 sudo netstat -tulpn | grep LISTEN 
+
+``nc -zv <ip_servera> <port>``
+sprawdza połaczenie z lokalnej maszyny do serwera
+
